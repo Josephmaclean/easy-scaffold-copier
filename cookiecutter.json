@@ -1,4 +1,5 @@
 {
-  "project_name": "testing",
-  "project_database": ["postgres", "mysql", "sqlite", "mongodb"]
+  "project_name": "My Awesome project",
+  "project_database": ["postgres", "mysql", "sqlite", "mongodb"],
+  "packaging": ["pip", "poetry"]
 }
