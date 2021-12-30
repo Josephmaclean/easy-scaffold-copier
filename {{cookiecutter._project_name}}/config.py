@@ -1,5 +1,5 @@
 class Config:
-    APP_NAME = "{{cookiecutter.project_name}}"
+    APP_NAME = "{{cookiecutter._project_name}}"
 
     DB_HOST = ""
     DB_USER = ""

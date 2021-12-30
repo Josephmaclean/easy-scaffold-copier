@@ -1,6 +1,5 @@
 import os
 import shutil
-import git
 
 REMOVE_PATHS = [
     '{% if cookiecutter.project_database == "mongodb" %} migrations {% endif %}',
@@ -17,3 +16,19 @@ for path in REMOVE_PATHS:
         else:
             os.unlink(path)
 
+remove_parent = "{{cookiecutter._remove_parent}}"
+
+if remove_parent == "True":
+    project_name = "{{cookiecutter._project_name}}"
+    source_dir = os.getcwd()
+    target_dir = os.path.join(source_dir, "..")
+
+    file_names = os.listdir(source_dir)
+
+    for file_name in file_names:
+        shutil.move(os.path.join(source_dir, file_name), target_dir)
+
+    shutil.rmtree(source_dir)
+
+elif remove_parent == "False":
+    print("not removing...")
