@@ -17,5 +17,3 @@ for path in REMOVE_PATHS:
         else:
             os.unlink(path)
 
-
-git.Repo.init("{{cookiecutter.project_name}}")
