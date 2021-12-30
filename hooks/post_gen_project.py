@@ -1,4 +1,5 @@
 import os
+import click
 import shutil
 
 REMOVE_PATHS = [
@@ -18,8 +19,9 @@ for path in REMOVE_PATHS:
 
 remove_parent = "{{cookiecutter._remove_parent}}"
 
+project_name = "{{cookiecutter._project_name}}"
+
 if remove_parent == "True":
-    project_name = "{{cookiecutter._project_name}}"
     source_dir = os.getcwd()
     target_dir = os.path.join(source_dir, "..")
 
@@ -30,3 +32,6 @@ if remove_parent == "True":
 
     shutil.rmtree(source_dir)
 
+    click.echo(click.style("Project scaffold complete. Happy hacking!!!", fg="bright_green"))
+else:
+    click.echo(click.style(f"{project_name} generated successfully. Happy hacking!!! ", fg="bright_green"))
