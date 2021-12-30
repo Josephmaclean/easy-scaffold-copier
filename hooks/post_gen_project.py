@@ -30,5 +30,3 @@ if remove_parent == "True":
 
     shutil.rmtree(source_dir)
 
-elif remove_parent == "False":
-    print("not removing...")
