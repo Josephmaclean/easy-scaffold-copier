@@ -1,6 +1,5 @@
 {
   "_project_name": "",
   "project_database": ["postgres", "mysql", "sqlite", "mongodb"],
-  "packaging": ["pip", "poetry"],
   "_remove_parent": false
 }
