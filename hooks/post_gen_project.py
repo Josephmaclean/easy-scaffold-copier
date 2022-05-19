@@ -1,26 +1,6 @@
 import os
 import click
 import shutil
-import pathlib
-
-REMOVE_PATHS = [
-    '{% if cookiecutter.project_database == "mongodb" %} migrations {% endif %}',
-]
-
-project_database = "{{cookiecutter.project_database}}"
-if project_database != "mongodb":
-    # create versions directory as it can't be committed to git
-    dir_path = os.path.join(os.getcwd(), "migrations/versions")
-    pathlib.Path(dir_path).mkdir(parents=False, exist_ok=True)
-
-
-for path in REMOVE_PATHS:
-    path = path.strip()
-    if path and os.path.exists(path):
-        if os.path.isdir(path):
-            shutil.rmtree(path)
-        else:
-            os.unlink(path)
 
 remove_parent = "{{cookiecutter._remove_parent}}"
 project_name = "{{cookiecutter._project_name}}"
