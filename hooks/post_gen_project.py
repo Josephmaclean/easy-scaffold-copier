@@ -5,7 +5,6 @@ import pathlib
 
 REMOVE_PATHS = [
     '{% if cookiecutter.project_database == "mongodb" %} migrations {% endif %}',
-    '{% if cookiecutter.packaging != "pip" %} requirements.txt {% endif %}',
 ]
 
 project_database = "{{cookiecutter.project_database}}"
