@@ -7,9 +7,14 @@ import subprocess
 remove_parent = "{{cookiecutter._remove_parent}}"
 project_name = "{{cookiecutter._project_name}}"
 
+source_dir = os.getcwd()
+
+subprocess.run(['git', 'init', source_dir])
+subprocess.run(['git', 'add', '*'])
+subprocess.run(['git', 'commit', '-m', 'Initial commit'])
+
 if remove_parent == "True":
     # Move app to specified directory if path is provided
-    source_dir = os.getcwd()
     target_dir = os.path.join(source_dir, "..")
 
     file_names = os.listdir(source_dir)
@@ -23,9 +28,3 @@ if remove_parent == "True":
 else:
 
     click.echo(click.style(f"{project_name} generated successfully. Happy hacking!!! ", fg="bright_green"))
-
-
-source_dir = os.getcwd()
-subprocess.run(['git', 'init', source_dir])
-subprocess.run(['git', 'add', '*'])
-subprocess.run(['git', 'commit', '-m', 'Initial commit'])
