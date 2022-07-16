@@ -9,9 +9,9 @@ project_name = "{{cookiecutter._project_name}}"
 
 source_dir = os.getcwd()
 
-subprocess.run(['git', 'init', source_dir])
-subprocess.run(['git', 'add', '*'])
-subprocess.run(['git', 'commit', '-m', 'Initial commit'])
+subprocess.run(['git', 'init', source_dir], stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+subprocess.run(['git', 'add', '*'], stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+subprocess.run(['git', 'commit', '-m', 'Initial commit'], stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
 
 if remove_parent == "True":
     # Move app to specified directory if path is provided
