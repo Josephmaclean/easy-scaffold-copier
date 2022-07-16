@@ -1,3 +1,3 @@
-from flask_easy import route
+from flask_easy import Route
 
 routes = []
