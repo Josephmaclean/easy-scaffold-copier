@@ -1,8 +1,3 @@
-from flask import Flask
+from flask_easy import route
 
-
-def blueprints(app: Flask):
-    """
-    Register app blueprints over here
-    eg: # app.register_blueprint(user, url_prefix="/users")
-    """
+routes = []

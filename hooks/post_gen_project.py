@@ -1,6 +1,7 @@
 import os
 import click
 import shutil
+import subprocess
 
 remove_parent = "{{cookiecutter._remove_parent}}"
 project_name = "{{cookiecutter._project_name}}"
@@ -21,3 +22,8 @@ if remove_parent == "True":
 else:
 
     click.echo(click.style(f"{project_name} generated successfully. Happy hacking!!! ", fg="bright_green"))
+
+
+subprocess.call(['git', 'init'])
+subprocess.call(['git', 'add', '*'])
+subprocess.call(['git', 'commit', '-m', 'Initial commit'])
