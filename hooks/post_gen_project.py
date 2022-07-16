@@ -3,6 +3,7 @@ import click
 import shutil
 import subprocess
 
+
 remove_parent = "{{cookiecutter._remove_parent}}"
 project_name = "{{cookiecutter._project_name}}"
 
@@ -24,6 +25,7 @@ else:
     click.echo(click.style(f"{project_name} generated successfully. Happy hacking!!! ", fg="bright_green"))
 
 
-subprocess.run(['git', 'init'])
+source_dir = os.getcwd()
+subprocess.run(['git', 'init', source_dir])
 subprocess.run(['git', 'add', '*'])
 subprocess.run(['git', 'commit', '-m', 'Initial commit'])
