@@ -24,6 +24,6 @@ else:
     click.echo(click.style(f"{project_name} generated successfully. Happy hacking!!! ", fg="bright_green"))
 
 
-# subprocess.call(['git', 'init'])
-# subprocess.call(['git', 'add', '*'])
-# subprocess.call(['git', 'commit', '-m', 'Initial commit'])
+subprocess.run(['git', 'init'])
+subprocess.run(['git', 'add', '*'])
+subprocess.run(['git', 'commit', '-m', 'Initial commit'])
