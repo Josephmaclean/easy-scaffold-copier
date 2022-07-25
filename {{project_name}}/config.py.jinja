@@ -1,0 +1,23 @@
+class Config:
+    APP_NAME = "{{project_name}}"
+
+    DATABASE = {
+        "engine": "{{project_database}}",
+        "host": "",
+        "port": "",
+        "user": "",
+        "password": "",
+        "name": ""
+    }
+
+
+class DevelopmentConfig(Config):
+    pass
+
+
+class ProductionConfig(Config):
+    pass
+
+
+class TestingConfig(Config):
+    pass

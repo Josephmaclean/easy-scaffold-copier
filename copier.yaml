@@ -1,0 +1,15 @@
+project_name:
+  type: str
+  help: What is your project name
+  default: My Awesome Project
+
+project_database:
+  type: str
+  choices:
+    nothing, thanks: None
+    postgres: "PostgresqlDatabase"
+    sqlite: "SqliteDatabase"
+    mysql: "MySQLDatabase"
+
+_tasks:
+  - 'git init'
