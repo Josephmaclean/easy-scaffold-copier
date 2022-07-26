@@ -1,7 +1,7 @@
 project_name:
   type: str
   help: What is your project name
-  default: My Awesome Project
+  default: "{{default_project_name}}"
 
 project_database:
   type: str
