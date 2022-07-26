@@ -1,7 +1,6 @@
 class Config:
     APP_NAME = "{{project_name}}"
-
-    {% if project_database is not None %}
+    {% if project_database != 'null' %}
     DATABASE = {
         "engine": "{{project_database}}",
         "host": "",
@@ -11,7 +10,6 @@ class Config:
         "name": ""
     }
     {% endif %}
-
 
 class DevelopmentConfig(Config):
     pass
