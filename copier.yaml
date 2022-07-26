@@ -6,7 +6,7 @@ project_name:
 project_database:
   type: str
   choices:
-    nothing, thanks: null
+    nothing, thanks: "null"
     postgres: "PostgresqlDatabase"
     sqlite: "SqliteDatabase"
     mysql: "MySQLDatabase"
