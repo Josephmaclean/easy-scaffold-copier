@@ -1,5 +1,0 @@
-{
-  "_project_name": "",
-  "project_database": ["postgres", "mysql", "sqlite", "mongodb"],
-  "_remove_parent": false
-}
